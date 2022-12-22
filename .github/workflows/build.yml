@@ -1,0 +1,23 @@
+name: Retweet
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *" # Runs Bot every 30 minutes # https://crontab.guru/
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Run Bot
+        uses: dephraiim/twitter-bot-action@v1.2.1
+        env:
+          BOT_CONSUMER_KEY: ${{ secrets.BOT_CONSUMER_KEY }}
+          BOT_CONSUMER_SECRET: ${{ secrets.BOT_CONSUMER_SECRET }}
+          BOT_ACCESS_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
+          BOT_ACCESS_TOKEN_SECRET: ${{ secrets.BOT_ACCESS_TOKEN_SECRET }}

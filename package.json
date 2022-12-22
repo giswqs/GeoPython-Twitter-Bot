@@ -1,0 +1,14 @@
+{
+  "name": "gee-bot",
+  "private": "true",
+  "version": "0.0.1",
+  "description": "Twitter bot for #GeoPython",
+  "main": "index.js",
+  "repository": "https://github.com/giswqs/GeoPython-Twitter-Bot",
+  "author": "Qiusheng Wu",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "twit": "^2.2.11"
+  }
+}
