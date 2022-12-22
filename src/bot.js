@@ -7,7 +7,7 @@ const TwitterBot = new Twit(config);
 const retweet = () => {
 
   const tags = ["#geospatial", "#geopython", "#leafmap", "jupyter", "mapping"];
-  const count = 15;
+  const count = 20;
 
   for (let i = 0; i < tags.length; i++) {
   
